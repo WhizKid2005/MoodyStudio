@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: #323334;
+    margin: 10px 5%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre logo e ícones */
+    align-items: center; /* Alinha verticalmente */
+    margin: 10px 5%;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.icons {
+    display: flex; /* Garante que os ícones fiquem na mesma linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+/* Estilização do menu principal */
+nav.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Estilização padrão dos links */
+.menu-links {
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #323334;
+    font-weight: bold;
+}
+
+/* Ícone do menu hambúrguer (escondido em telas grandes) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+}
+
+/* Oculta o checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    /* Mostra o ícone do menu hambúrguer */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Esconde os links inicialmente */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Mostra o menu quando o checkbox está marcado */
+    #menu-toggle:checked + .menu-icon + .menu-links {
+        display: flex;
+    }
+}
+
+/* Seção de informações (FREE SHIPPING, MONEY BACK, SUPPORT 24/7) */
+.menu-1 ul {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* Reduzi para evitar problemas em telas menores */
+    padding: 30px 5%;
+    list-style: none;
+    text-align: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    cursor: pointer;
+}
+
+/* Ícones */
+li i {
+    font-size: 20px;
+    color: #F2C94C;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .menu-1 ul {
+        gap: 80px; /* Reduz espaçamento em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-1 ul {
+        flex-direction: column; /* Empilha os itens em telas pequenas */
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+.banner {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #DBD0CC; /* Cor de fundo */
+    padding: 50px 4%;
+    border: 1px solid; /* Mantém a borda sem afetar o design */
+    gap: 50px; /* Espaço entre a imagem e o texto */
+    margin: 0 auto; /* Centraliza na tela */
+    height: 500px;
+}
+
+/* Estilização do conteúdo do banner */
+.banner-content {
+    max-width: 50%;
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+}
+
+/* Ajuste do título */
+.banner-content h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #323334;
+    margin-bottom: 10px;
+}
+
+/* Ajuste do texto principal */
+.banner-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #A86A3D;
+    margin-bottom: 20px;
+}
+
+/* Estilização do botão */
+.banner-content button {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Ajuste da imagem */
+.banner-image {
+    flex: 8; /* Permite que a imagem ocupe espaço proporcional */
+    display: flex;
+    justify-content: flex-end; /* Alinha a imagem à direita */
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: 566px;
+    object-fit: contain;
+}
+
+.catalogo {
+    display: flex;
+    justify-content: center; /* Centraliza os itens no eixo principal */
+    gap: 20px; /* Espaço entre os blocos */
+    margin: 30px 5%;
+   
+}
+
+.catalogo1, .catalogo2 {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 50%;
+    padding: 20px;
+}
+
+.catalogo1 {
+    background-color: #FAFAFA;
+}
+
+.catalogo2 {
+    background-color: #EAE9E7;
+}
+
+/* Ajustes das imagens */
+.catalogo1-img, .catalogo2-img {
+    flex: 1; /* Ocupa metade do espaço */
+}
+
+.catalogo1-img img, .catalogo2-img img {
+    width: 100%;
+    height: 468px;
+}
+
+/* Ajustes dos textos */
+.catalogo1-text, .catalogo2-text {
+    flex: 1; /* Ocupa metade do espaço */
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Estilo do botão */
+.catalogo1-text button, .catalogo2-text button {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* Estilo do catálogo de produtos */
+.catalogo-1 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+   
+}
+
+.catalogo-1 div {
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0px;
+}
+
+.catalogo-1 img {
+     width: 390px;
+    height: 522px;
+}
+
+.catalogo-1 p {
+    font-size: 18px;
+    color: #333;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.catalogo-1 i {
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.texto{
+    background-color: #FFFFFFE5;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imagem {
+    width: 100%;
+    height: 100vh;
+}
+
+.imagem img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 545px;
+    height: 338px;
+    display: flex;
+    flex-direction: column; /* Garante que os elementos fiquem empilhados */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Alinha o texto no centro */
+}
+
+
+.texto h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d94c3d;
+}
+
+.texto p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.texto button {
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.top h1{
+    margin: 10px 5%;
+}
+
+.top-image{
+    margin: 10px 5%;
+    display: flex;
+    gap: 20px;
+}
+.top-image i{
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.top-image p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.top-image .catalogo1{
+    background-color: #fff;
+}
+
+.botao{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.botao button{
+    background-color: #323334;
+    height:51px;
+    width: 371px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pesquisar {
+    margin: 40px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Caixa do input */
+.pesquisar div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 450px; /* Ajustado para maior largura */
+    max-width: 100%;
+}
+
+/* Campo de email */
+.pesquisar input {
+    border: none;
+    padding: 12px 15px;
+    flex: 1;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Ícone */
+.pesquisar i {
+    background: #333;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pesquisar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .pesquisar div {
+        width: 100%;
+    }
+}
+
+
+
+.rodape {
+    background-color: #323334;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: space-between;
+    padding: 40px 5%;
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+.rodape div {
+    flex: 1;
+    min-width: 250px; /* Garante que os itens fiquem organizados em telas menores */
+    margin: 20px;
+}
+
+.rodape .diferent-text {
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.rodape div p {
+    padding: 5px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.rodape div p i {
+    margin: 0 10px;
+}
+
+.lastrodape {
+    background-color: #222222;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.lastrodape p {
+    color: #fff;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
