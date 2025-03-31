@@ -14,8 +14,8 @@ hr{
 
 .cabecalho {
     display: flex;
-    justify-content: space-between; /* Distribui espaço entre logo e ícones */
-    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; 
+    align-items: center; 
     margin: 10px 5%;
     padding: 20px 0;
     font-weight: bold;
@@ -23,9 +23,9 @@ hr{
 }
 
 .icons {
-    display: flex; /* Garante que os ícones fiquem na mesma linha */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 20px; /* Espaçamento entre os ícones */
+    display: flex;
+    align-items: center;
+    gap: 20px; 
 }
 
 /* Estilização do menu principal */
@@ -50,7 +50,7 @@ nav.menu {
     font-weight: bold;
 }
 
-/* Ícone do menu hambúrguer (escondido em telas grandes) */
+/* Ícone do menu */
 .menu-icon {
     display: none;
     font-size: 24px;
@@ -59,24 +59,24 @@ nav.menu {
     left: 20px;
 }
 
-/* Oculta o checkbox */
+
 #menu-toggle {
     display: none;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .menu {
         justify-content: space-between;
         padding: 15px;
     }
 
-    /* Mostra o ícone do menu hambúrguer */
+    
     .menu-icon {
         display: block;
     }
 
-    /* Esconde os links inicialmente */
+   
     .menu-links {
         display: none;
         flex-direction: column;
@@ -94,7 +94,7 @@ nav.menu {
         padding: 10px;
     }
 
-    /* Mostra o menu quando o checkbox está marcado */
+   
     #menu-toggle:checked + .menu-icon + .menu-links {
         display: flex;
     }
@@ -104,11 +104,11 @@ nav.menu {
 .menu-1 ul {
     display: flex;
     justify-content: center;
-    gap: 150px; /* Reduzi para evitar problemas em telas menores */
+    gap: 150px;
     padding: 30px 5%;
     list-style: none;
     text-align: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    flex-wrap: wrap; 
     cursor: pointer;
 }
 
@@ -119,41 +119,39 @@ li i {
     padding: 10px;
 }
 
-/* Responsividade */
+
 @media (max-width: 1024px) {
     .menu-1 ul {
-        gap: 80px; /* Reduz espaçamento em telas médias */
+        gap: 80px; 
     }
 }
 
 @media (max-width: 768px) {
     .menu-1 ul {
-        flex-direction: column; /* Empilha os itens em telas pequenas */
+        flex-direction: column; 
         align-items: center;
         gap: 20px;
     }
 }
 
-
+/* Estilização do banner */
 .banner {
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    background-color: #DBD0CC; /* Cor de fundo */
+    justify-content: center;
+    align-items: center; 
+    background-color: #DBD0CC; 
     padding: 50px 4%;
-    border: 1px solid; /* Mantém a borda sem afetar o design */
-    gap: 50px; /* Espaço entre a imagem e o texto */
-    margin: 0 auto; /* Centraliza na tela */
+    border: 1px solid; 
+    gap: 50px;
+    margin: 0 auto; 
     height: 500px;
 }
 
-/* Estilização do conteúdo do banner */
 .banner-content {
     max-width: 50%;
-    text-align: left; /* Mantém o texto alinhado à esquerda */
+    text-align: left; 
 }
 
-/* Ajuste do título */
 .banner-content h4 {
     font-size: 22px;
     font-weight: bold;
@@ -161,7 +159,6 @@ li i {
     margin-bottom: 10px;
 }
 
-/* Ajuste do texto principal */
 .banner-content h1 {
     font-size: 48px;
     font-weight: bold;
@@ -169,7 +166,6 @@ li i {
     margin-bottom: 20px;
 }
 
-/* Estilização do botão */
 .banner-content button {
     background: transparent;
     border: 1px solid #333;
@@ -178,11 +174,10 @@ li i {
     cursor: pointer;
 }
 
-/* Ajuste da imagem */
 .banner-image {
-    flex: 8; /* Permite que a imagem ocupe espaço proporcional */
+    flex: 8;
     display: flex;
-    justify-content: flex-end; /* Alinha a imagem à direita */
+    justify-content: flex-end; 
 }
 
 .banner-image img {
@@ -193,15 +188,15 @@ li i {
 
 .catalogo {
     display: flex;
-    justify-content: center; /* Centraliza os itens no eixo principal */
-    gap: 20px; /* Espaço entre os blocos */
+    justify-content: center; 
+    gap: 20px; 
     margin: 30px 5%;
    
 }
 
 .catalogo1, .catalogo2 {
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
+    align-items: center; 
     width: 50%;
     padding: 20px;
 }
@@ -214,9 +209,8 @@ li i {
     background-color: #EAE9E7;
 }
 
-/* Ajustes das imagens */
 .catalogo1-img, .catalogo2-img {
-    flex: 1; /* Ocupa metade do espaço */
+    flex: 1;
 }
 
 .catalogo1-img img, .catalogo2-img img {
@@ -224,14 +218,12 @@ li i {
     height: 468px;
 }
 
-/* Ajustes dos textos */
 .catalogo1-text, .catalogo2-text {
-    flex: 1; /* Ocupa metade do espaço */
+    flex: 1; 
     text-align: left;
     padding-left: 20px;
 }
 
-/* Estilo do botão */
 .catalogo1-text button, .catalogo2-text button {
     background: transparent;
     border: 1px solid #333;
@@ -242,7 +234,7 @@ li i {
 }
 
 
-/* Estilo do catálogo de produtos */
+/* catálogo de produtos */
 .catalogo-1 {
     display: flex;
     gap: 20px;
@@ -305,10 +297,10 @@ li i {
     width: 545px;
     height: 338px;
     display: flex;
-    flex-direction: column; /* Garante que os elementos fiquem empilhados */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    text-align: center; /* Alinha o texto no centro */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
 }
 
 
@@ -386,18 +378,16 @@ li i {
     flex-wrap: wrap;
 }
 
-/* Caixa do input */
 .pesquisar div {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    width: 450px; /* Ajustado para maior largura */
+    width: 450px; 
     max-width: 100%;
 }
 
-/* Campo de email */
 .pesquisar input {
     border: none;
     padding: 12px 15px;
@@ -407,7 +397,6 @@ li i {
     width: 100%;
 }
 
-/* Ícone */
 .pesquisar i {
     background: #333;
     color: white;
@@ -419,7 +408,6 @@ li i {
     width: 60px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .pesquisar {
         flex-direction: column;
@@ -432,21 +420,19 @@ li i {
     }
 }
 
-
-
 .rodape {
     background-color: #323334;
     color: #fff;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    flex-wrap: wrap; 
     justify-content: space-between;
     padding: 40px 5%;
-    gap: 20px; /* Espaço entre as colunas */
+    gap: 20px; 
 }
 
 .rodape div {
     flex: 1;
-    min-width: 250px; /* Garante que os itens fiquem organizados em telas menores */
+    min-width: 250px; 
     margin: 20px;
 }
 
@@ -476,7 +462,6 @@ li i {
     margin: 0;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .rodape {
         flex-direction: column;
